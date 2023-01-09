@@ -26,10 +26,10 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
      00000006  l__HEADER |    00000007  l__HEADER |    00000008  l__HEADER
      0000000C  l__GSINIT |    00000019  l__DATA   |    00000030  l__HEADER
      0000004E  l__HEADER |    00000082  l__HEADER |    0000017F  l__HOME  
-     00000200  s__CODE   |    0000021E  l__CODE   |    000003D1  l__INITIA
-     000003D1  l__INITIA |    0000041E  s__HOME   |    0000059D  s__BASE  
-     0000059D  s__CODE_0 |    0000059D  s__INITIA |    0000059D  s__LIT   
-     0000096E  s__GSINIT |    0000097A  s__GSFINA |    00002000  _rROMB0  
+     00000200  s__CODE   |    0000025D  l__CODE   |    000003D1  l__INITIA
+     000003D1  l__INITIA |    0000045D  s__HOME   |    000005DC  s__BASE  
+     000005DC  s__CODE_0 |    000005DC  s__INITIA |    000005DC  s__LIT   
+     000009AD  s__GSINIT |    000009B9  s__GSFINA |    00002000  _rROMB0  
      00003000  _rROMB1   |    00004000  _rRAMB    |    00008000  __VRAM   
      00008000  __VRAM800 |    00008800  __VRAM880 |    00009000  __VRAM900
      00009800  __SCRN0   |    00009C00  __SCRN1   |    0000A000  __SRAM   
@@ -62,7 +62,7 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    0000021E =         542. bytes (REL,CON)
+_CODE                  00000200    0000025D =         605. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -242,25 +242,25 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_HOME                  0000041E    0000017F =         383. bytes (REL,CON)
+_HOME                  0000045D    0000017F =         383. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
-     0000041E  .memset_s |    00000427  .memcpy_s |    00000444  .remove_V
-     00000447  .remove_i |    00000464  .add_VBL  |    00000467  .add_int 
-     00000472  .wait_vbl |    00000472  _wait_vbl |    00000482  .display_
-     00000482  _display_ |    0000049A  _remove_V |    000004A5  _add_VBL 
-     000004B0  _set_tile |    000004B5  _set_bkg_ |    000004B5  _set_win_
-     000004BD  _set_spri |    000004ED  .padup    |    000004ED  _waitpadu
-     000004FD  .jpad     |    000004FD  _joypad   |    00000525  _waitpad 
-     00000528  .wait_pad |    0000052F  _set_bkg_ |    00000543  .set_xy_w
-     0000054C  .set_xy_b |    0000055B  .set_xy_t
+     0000045D  .memset_s |    00000466  .memcpy_s |    00000483  .remove_V
+     00000486  .remove_i |    000004A3  .add_VBL  |    000004A6  .add_int 
+     000004B1  .wait_vbl |    000004B1  _wait_vbl |    000004C1  .display_
+     000004C1  _display_ |    000004D9  _remove_V |    000004E4  _add_VBL 
+     000004EF  _set_tile |    000004F4  _set_bkg_ |    000004F4  _set_win_
+     000004FC  _set_spri |    0000052C  .padup    |    0000052C  _waitpadu
+     0000053C  .jpad     |    0000053C  _joypad   |    00000564  _waitpad 
+     00000567  .wait_pad |    0000056E  _set_bkg_ |    00000582  .set_xy_w
+     0000058B  .set_xy_b |    0000059A  .set_xy_t
 ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
 Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_INITIALIZER           0000059D    000003D1 =         977. bytes (REL,CON)
+_INITIALIZER           000005DC    000003D1 =         977. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -269,17 +269,17 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_GSINIT                0000096E    0000000C =          12. bytes (REL,CON)
+_GSINIT                000009AD    0000000C =          12. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
-     0000096E  gsinit   
+     000009AD  gsinit   
 ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
 Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_GSFINAL               0000097A    00000001 =           1. bytes (REL,CON)
+_GSFINAL               000009B9    00000001 =           1. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -319,7 +319,7 @@ _HRAM12                00000000    00000003 =           3. bytes (ABS,CON)
 Files Linked                              [ module(s) ]
 
 /opt/gbdk/lib/small/asxxxx/gb/crt0.o      [ Runtime ]
-/tmp/lcc117930.o                          [ main ]
+/tmp/lcc131550.o                          [ main ]
 
 
 Libraries Linked                          [ object file ]

@@ -4,5 +4,8 @@
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
+  },
+  "files.associations": {
+    "stdint.h": "c"
   }
 }
