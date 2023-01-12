@@ -29,10 +29,10 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
      00000007  l__HEADER |    00000008  l__HEADER |    0000000C  l__GSINIT
      00000030  l__HEADER |    0000003F  l__DATA   |    0000004E  l__HEADER
      00000082  l__HEADER |    00000200  s__CODE   |    000003D6  l__INITIA
-     000003D6  l__INITIA |    0000092A  l__HOME   |    00001689  l__CODE  
-     00001889  s__HOME   |    00002000  _rROMB0   |    000021B3  s__BASE  
-     000021B3  s__CODE_0 |    000021B3  s__INITIA |    000021B3  s__LIT   
-     00002589  s__GSINIT |    00002595  s__GSFINA |    00003000  _rROMB1  
+     000003D6  l__INITIA |    0000092A  l__HOME   |    000016BD  l__CODE  
+     000018BD  s__HOME   |    00002000  _rROMB0   |    000021E7  s__BASE  
+     000021E7  s__CODE_0 |    000021E7  s__INITIA |    000021E7  s__LIT   
+     000025BD  s__GSINIT |    000025C9  s__GSFINA |    00003000  _rROMB1  
      00004000  _rRAMB    |    00008000  __VRAM    |    00008000  __VRAM800
      00008800  __VRAM880 |    00009000  __VRAM900 |    00009800  __SCRN0  
      00009C00  __SCRN1   |    0000A000  __SRAM    |    0000C000  __RAM    
@@ -74,14 +74,14 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_CODE                  00000200    00001689 =        5769. bytes (REL,CON)
+_CODE                  00000200    000016BD =        5821. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
      00000200  _set_meta |    00000247  _move_met |    000002BB  _scroll_m
      0000033A  _splash   |    00000386  _space_al |    000010F6  _space_al
-     00001299  _game     |    000013BC  _main     |    0000140E  _printf  
-     000014D1  ___printf |    00001868  _sprintf 
+     00001299  _start    |    000012CD  _game     |    000013F0  _main    
+     00001442  _printf   |    00001505  ___printf |    0000189C  _sprintf 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
 Hexadecimal  [32-Bits]
 
@@ -256,38 +256,38 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_HOME                  00001889    0000092A =        2346. bytes (REL,CON)
+_HOME                  000018BD    0000092A =        2346. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
-     00001889  .memset_s |    00001892  .memcpy_s |    000018AF  .remove_V
-     000018B2  .remove_i |    000018CF  .add_VBL  |    000018D2  .add_int 
-     000018DD  .wait_vbl |    000018DD  _wait_vbl |    000018ED  .display_
-     000018ED  _display_ |    00001905  _remove_V |    00001910  _add_VBL 
-     0000191B  _set_tile |    00001920  _set_bkg_ |    00001920  _set_win_
-     00001928  _set_spri |    00001958  .padup    |    00001958  _waitpadu
-     00001968  .jpad     |    00001968  _joypad   |    00001990  _waitpad 
-     00001993  .wait_pad |    0000199A  _puts     |    000019B7  _set_bkg_
-     000019CB  _font_loa |    000019D2  font_load |    00001A1A  font_copy
-     00001A50  font_set  |    00001A5D  .put_char |    00001A75  .out_char
-     00001A7B  .del_char |    00001AD1  _putchar  |    00001ADA  _setchar 
-     00001AE3  _font_loa |    00001AF1  _font_set |    00001B00  _font_ini
-     00001B1F  .cls      |    00001B1F  _cls      |    00001B41  _gotoxy  
-     00001B4C  _posx     |    00001B5D  _posy     |    00001B85  .cr_curs 
-     00001B9A  .adv_curs |    00001BF6  .tmode    |    00001C1F  .tmode_ou
-     00001C28  _color    |    00001C28  _set_1bpp |    00001C37  .drawing_
-     00001C42  .drawing_ |    00001C7E  _add_LCD  |    00001C89  .add_LCD 
-     00001C8F  _remove_L |    00001C9A  .remove_L |    00001CA0  _font_ibm
-     00002052  .set_xy_w |    0000205B  .set_xy_b |    0000206A  .set_xy_t
-     000020AC  _uitoa    |    000020BB  _itoa     |    000020CA  .itoa    
-     000020DE  .utoa     |    00002152  _set_bkg_ |    00002152  _set_win_
-     0000215A  _set_spri |    000021B2  ___sdcc_c
+     000018BD  .memset_s |    000018C6  .memcpy_s |    000018E3  .remove_V
+     000018E6  .remove_i |    00001903  .add_VBL  |    00001906  .add_int 
+     00001911  .wait_vbl |    00001911  _wait_vbl |    00001921  .display_
+     00001921  _display_ |    00001939  _remove_V |    00001944  _add_VBL 
+     0000194F  .padup    |    0000194F  _waitpadu |    0000195F  .jpad    
+     0000195F  _joypad   |    00001987  _waitpad  |    0000198A  .wait_pad
+     00001991  _set_tile |    00001996  _set_bkg_ |    00001996  _set_win_
+     0000199E  _set_spri |    000019CE  _puts     |    000019EB  _set_bkg_
+     000019FF  _font_loa |    00001A06  font_load |    00001A4E  font_copy
+     00001A84  font_set  |    00001A91  .put_char |    00001AA9  .out_char
+     00001AAF  .del_char |    00001B05  _putchar  |    00001B0E  _setchar 
+     00001B17  _font_loa |    00001B25  _font_set |    00001B34  _font_ini
+     00001B53  .cls      |    00001B53  _cls      |    00001B75  _gotoxy  
+     00001B80  _posx     |    00001B91  _posy     |    00001BB9  .cr_curs 
+     00001BCE  .adv_curs |    00001C2A  .tmode    |    00001C53  .tmode_ou
+     00001C5C  _color    |    00001C5C  _set_1bpp |    00001C6B  .drawing_
+     00001C76  .drawing_ |    00001CB2  _add_LCD  |    00001CBD  .add_LCD 
+     00001CC3  _remove_L |    00001CCE  .remove_L |    00001CD4  _font_ibm
+     00002086  .set_xy_w |    0000208F  .set_xy_b |    0000209E  .set_xy_t
+     000020E0  _uitoa    |    000020EF  _itoa     |    000020FE  .itoa    
+     00002112  .utoa     |    00002186  _set_bkg_ |    00002186  _set_win_
+     0000218E  _set_spri |    000021E6  ___sdcc_c
 ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
 Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_INITIALIZER           000021B3    000003D6 =         982. bytes (REL,CON)
+_INITIALIZER           000021E7    000003D6 =         982. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -296,17 +296,17 @@ Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_GSINIT                00002589    0000000C =          12. bytes (REL,CON)
+_GSINIT                000025BD    0000000C =          12. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
-     00002589  gsinit   
+     000025BD  gsinit   
 ASxxxx Linker V03.00 + NoICE + sdld,  page 25.
 Hexadecimal  [32-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-_GSFINAL               00002595    00000001 =           1. bytes (REL,CON)
+_GSFINAL               000025C9    00000001 =           1. bytes (REL,CON)
 
         Value  Global            Value  Global            Value  Global    
         -----  ------            -----  ------            -----  ------    
@@ -368,14 +368,14 @@ _HEADER_LCD0           00000000    00000003 =           3. bytes (ABS,CON)
 Files Linked                              [ module(s) ]
 
 /opt/gbdk/lib/small/asxxxx/gb/crt0.o      [ Runtime ]
-/tmp/lcc115080.o                          [ main ]
+/tmp/lcc177150.o                          [ main ]
 
 
 Libraries Linked                          [ object file ]
 
+/opt/gbdk/lib/small/asxxxx/gb/gb.lib      [ pad.o ]
 /opt/gbdk/lib/small/asxxxx/gb/gb.lib      [ sfr.o ]
 /opt/gbdk/lib/small/asxxxx/gb/gb.lib      [ set_data.o ]
-/opt/gbdk/lib/small/asxxxx/gb/gb.lib      [ pad.o ]
 /opt/gbdk/lib/small/asxxxx/gbz80/gbz80.lib
                                           [ puts.o ]
 /opt/gbdk/lib/small/asxxxx/gbz80/gbz80.lib

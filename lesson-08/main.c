@@ -62,6 +62,21 @@ screen_t splash() {
 }
 
 
+// start scene
+screen_t start() {
+    screen_t next_screen = GAME;
+
+    set_bkg_data(0, 215, space_aliens_data);
+    set_bkg_tiles(0, 0, 20, 18, space_aliens_map);
+
+    SHOW_BKG; // turn Background on
+    DISPLAY_ON;
+
+    waitpad(J_START);
+    return next_screen;
+}
+
+
 // game scene
 screen_t game() {
         //user input
