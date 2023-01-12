@@ -27,7 +27,7 @@ typedef enum {
 screen_t splash() {
     // user input
     uint8_t joypadData;
-    screen_t next_screen = GAME;
+    screen_t next_screen = START;
 
     // time
     unsigned int timeCounter =0;
@@ -185,8 +185,7 @@ void main(){
             current_screen = splash();
         }
         else if (current_screen == START) {
-            printf("start");
-            // current_screen = start();
+            current_screen = start();
         }
         else if (current_screen == GAME) {
             current_screen = game();
